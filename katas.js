@@ -191,14 +191,14 @@ function buildCharMap(str) {
   return charMap;
 }
 
-// --- Directions
-// Write a function that accepts a string.  The function should
-// capitalize the first letter of each word in the string then
-// return the capitalized string.
-// --- Examples
-//   capitalize('a short sentence') --> 'A Short Sentence'
-//   capitalize('a lazy fox') --> 'A Lazy Fox'
-//   capitalize('look, it is working!') --> 'Look, It Is Working!'
+/*--- Directions
+Write a function that accepts a string.  The function should
+capitalize the first letter of each word in the string then
+return the capitalized string.
+--- Examples
+  capitalize('a short sentence') --> 'A Short Sentence'
+  capitalize('a lazy fox') --> 'A Lazy Fox'
+  capitalize('look, it is working!') --> 'Look, It Is Working!'*/
 
 function capitalize(str) {
   const array = str.split(' ');
@@ -210,6 +210,39 @@ function capitalize(str) {
 
   return newArray.join(' ')
 
+}
+
+/*--- Directions
+Write a function that accepts a positive number N.
+The function should console log a step shape
+with N levels using the # character.  Make sure the
+step has spaces on the right hand side!
+--- Examples
+  steps(2)
+      '# '
+      '##'
+  steps(3)
+      '#  '
+      '## '
+      '###'
+  steps(4)
+      '#   '
+      '##  '
+      '### '
+      '####'*/
+
+
+function steps(n) {
+  let number = 1;
+
+  while (number <= n) {
+
+    let result = '#'.repeat(number) + ' '.repeat(n - number);
+
+    console.log(result)
+
+    number++
+  }
 }
 
 
